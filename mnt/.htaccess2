@@ -1,0 +1,7 @@
+RewriteEngine on
+
+# Ruta base
+RewriteCond %{REQUEST_URI} ^/mnt/frontend/
+
+# Redireccionar
+RewriteRule ^(.*)$ /web/$1 [L]
