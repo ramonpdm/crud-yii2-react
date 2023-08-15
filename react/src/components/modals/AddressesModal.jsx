@@ -119,12 +119,11 @@ const AddressesModal = ({ data, setData, address, setAddress, modalInsertAddress
 							const request = await DELETE(address.id_address, "addresses")
 							// Validar que no exista algún error
 							if (request.err === false) {
-								toggleModalDeleteAddress()
 								setData((prevData) => ({
 									...prevData,
 									addresses: prevData.addresses.filter((row) => row.id_address !== address.id_address),
 								}))
-								toggleModalEditAddress()
+								toggleModalDeleteAddress()
 							} else {
 								MySwal.fire({
 									title: <p>Hubo un error al realizar esta acción</p>,
