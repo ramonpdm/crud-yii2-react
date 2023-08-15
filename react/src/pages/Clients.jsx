@@ -51,8 +51,10 @@ const Clients = () => {
 						<table className="table table-striped">
 							<thead>
 								<tr>
-									<th>ID Cliente</th>
-									<th>Name</th>
+									<th>ID</th>
+									<th>Nombre</th>
+									<th>Perfiles</th>
+									<th>Direcciones</th>
 									<th></th>
 								</tr>
 							</thead>
@@ -61,6 +63,8 @@ const Clients = () => {
 									<tr key={row.id_client}>
 										<td style={{ verticalAlign: "middle" }}>{row.id_client}</td>
 										<td style={{ verticalAlign: "middle" }}>{row.client_name}</td>
+										<td style={{ verticalAlign: "middle" }}>{row.profiles_count}</td>
+										<td style={{ verticalAlign: "middle" }}>{row.addresses_count}</td>
 										<td style={{ textAlign: "right" }}>
 											<button
 												className="btn btn-danger"

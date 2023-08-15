@@ -5,13 +5,23 @@ namespace frontend\resource;
 class Client extends \common\models\Client
 {
     /**
+     * Propiedades virtuales para almacenar cantidades
+     * @see \frontend\controllers\ClientController
+     */
+    public $profiles_count;
+    public $addresses_count;
+
+    /**
      * Columnas que retornará la API.
      * 
      * @return array
      */
     public function fields()
     {
-        return ['id_client', 'client_name'];
+        // Retornar clientes y la cantidad de perfiles y direcciones
+        return [
+            'id_client', 'client_name', 'profiles_count', 'addresses_count',
+        ];
     }
 
     /**
@@ -24,7 +34,6 @@ class Client extends \common\models\Client
     {
         return ['addresses', 'profiles'];
     }
-
 
     /**
      * Gets query for [[Addresses]].
