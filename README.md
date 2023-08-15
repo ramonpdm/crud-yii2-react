@@ -1,7 +1,9 @@
 # crud-yii2-react
-CRUD RESTFUL API en YII2 consumida con ReactJS. Desarrollado con fines educativos en el manejo de YTI2 y ReactJS.
+CRUD RESTFUL API en YII2 consumida con ReactJS. Desarrollado con fines educativos en el manejo de YII2 y ReactJS.
 
-**• RESTFUL API de YII2 creada en Windows/Xampp. PHP Version 8.2.4. Migraciones de YII2 implementadas.**
+**• RESTFUL API de YII2 hosteada en ambiente local Windows/Xampp. PHP Version 8.2.4.**
+
+**• Migraciones de YII2 implementadas para creación y relación de tablas.**
 
 **• No fue contemplado métodos de autorización de usuario para consumir la API en YII2.**
 
