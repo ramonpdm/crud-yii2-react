@@ -41,13 +41,13 @@ const Clients = () => {
 	return (
 		<>
 			<div>
-				{data !== null ? (
+				<br />
+				<button className="btn btn-success" onClick={() => toggleModalInsert()}>
+					Crear Cliente
+				</button>
+				<hr />
+				{data !== null && data.length > 0 ? (
 					<div>
-						<br />
-						<button className="btn btn-success" onClick={() => toggleModalInsert()}>
-							Crear Cliente
-						</button>
-						<hr />
 						<table className="table table-striped">
 							<thead>
 								<tr>
@@ -89,25 +89,25 @@ const Clients = () => {
 								))}
 							</tbody>
 						</table>
-						{/* Llamar a los Modals de Insertar, Editar y Eliminar */}
-						<ModalClients
-							data={data}
-							setData={setData}
-							client={client}
-							setClient={setClient}
-							modalInsert={modalInsert}
-							setModalInsert={setModalInsert}
-							modalEdit={modalEdit}
-							setModalEdit={setModalEdit}
-							modalDelete={modalDelete}
-							setModalDelete={setModalDelete}
-						></ModalClients>
 					</div>
 				) : (
 					<div>
 						<h2>No hay datos disponibles</h2>
 					</div>
 				)}
+				{/* Llamar a los Modals de Insertar, Editar y Eliminar */}
+				<ModalClients
+					data={data}
+					setData={setData}
+					client={client}
+					setClient={setClient}
+					modalInsert={modalInsert}
+					setModalInsert={setModalInsert}
+					modalEdit={modalEdit}
+					setModalEdit={setModalEdit}
+					modalDelete={modalDelete}
+					setModalDelete={setModalDelete}
+				></ModalClients>
 			</div>
 		</>
 	)
